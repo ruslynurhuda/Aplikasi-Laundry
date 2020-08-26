@@ -61,8 +61,6 @@
 											<th scope="col" width="10" >No</th>
 											<th scope="col" width="100" >Kode</th>
 											<th scope="col" width="250">Nama</th>
-											<th scope="col" width="250" >Alamat</th>
-											<th scope="col" width="250" >Telp</th>
 											<th scope="col" width="100" >Total Cuci</th>
 											<th scope="col" width="20" >Aksi</th>
 											<!-- <th scope="col">Action</th> -->
@@ -75,15 +73,15 @@
                                             foreach($pelanggan as $p) : ?>
                                                 <tr>
                                                     <td><?= $no++; ?></td>
-                                                    <td><?= $p['pelanggan_kd'] ?></td>
+                                                    <td class="text-success">
+														<a href="detail_pelanggan.php?id=<?= $p['pelanggan_id'] ?>"><h4><?= $p['pelanggan_kd'] ?></h4></a>
+													</td>
                                                     <td><?= $p['pelanggan_nama'] ?></td>
-													<td><?= $p['pelanggan_alamat'] ?></td>
-													<td><?= $p['pelanggan_telp'] ?></td>
 
 													<?php $idp = $p['pelanggan_id'] ?>
 													<?php $cuci = ambilsatubaris("SELECT COUNT(orderan_pelanggan) as jumlah_cuci FROM orderan WHERE orderan_pelanggan = '$idp' ") ?>
                                                     <td class="text-center"><?= $cuci['jumlah_cuci'] ?> x</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <div class="form-button-action justify-content-center">
 															<a href="#" data-toggle="modal" data-target="#edit<?= $p['pelanggan_id'] ?>" class="btn btn-link btn-primary">
 																<i class="fa fa-edit"></i>

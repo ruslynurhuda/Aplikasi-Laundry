@@ -199,10 +199,11 @@ function tambah_pelanggan($data) {
 	$pelanggan_alamat		= htmlspecialchars($data["pelanggan_alamat"]);
 	$pelanggan_jk			= htmlspecialchars($data["pelanggan_jk"]);
 	$pelanggan_telp			= htmlspecialchars($data["pelanggan_telp"]);
+	$join 					= date("y-m-d G:i:s");
 
 	$query			= "INSERT INTO pelanggan 
 						VALUES
-						('', '$pelanggan_kd', '$pelanggan_nama', '$pelanggan_alamat', '$pelanggan_jk', '$pelanggan_telp')
+						('', '$pelanggan_kd', '$pelanggan_nama', '$pelanggan_alamat', '$pelanggan_jk', '$pelanggan_telp', '$join')
 					";
 	
 	mysqli_query($conn, $query);
