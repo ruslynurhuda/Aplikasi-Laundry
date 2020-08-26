@@ -63,8 +63,9 @@
 											<th scope="col" width="10" >No</th>
 											<th scope="col" width="100" >Kode</th>
 											<th scope="col" width="250">Nama</th>
-											<th scope="col" width="250">deks</th>
+											<th scope="col" width="250">Deks</th>
 											<th scope="col" width="100" >Harga/satuan</th>
+											<th scope="col" width="100" >Total transaksi</th>
 											<th scope="col" width="20" >Aksi</th>
 										</tr>
 									</thead>
@@ -79,6 +80,10 @@
                                                     <td><?= $s['service_nama'] ?></td>
                                                     <td><?= $s['service_deks'] ?></td>
                                                     <td><?= 'Rp ' .  number_format($s['service_harga'], 0, ".", ",") .'/' . $s['service_satuan'] ?></td>
+													<?php $kd = $s['service_kd'] ?>
+    												<?php $tot = ambilsatubaris("SELECT COUNT(tampung_service) as jumlah_service FROM tampung WHERE tampung_service = '$kd' ") ?>
+
+													<td class="text-center"><?= $tot['jumlah_service'] ?></td>
                                                     <td>
                                                         <div class="form-button-action justify-content-center">
 															<a href="#" data-toggle="modal" data-target="#edit<?= $s['service_id'] ?>" class="btn btn-link btn-primary">

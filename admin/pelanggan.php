@@ -3,7 +3,8 @@
     $title = 'Data Pelanggan';
     require 'layout/layout_header.php'; 
 
-    $pelanggan = query("SELECT * FROM pelanggan");
+	$pelanggan = query("SELECT * FROM pelanggan");
+	$orderan   = query("SELECT * FROM orderan");
     
     // Generate kode pelanggan
     $bAngka         = "1234567890";
@@ -61,7 +62,8 @@
 											<th scope="col" width="100" >Kode</th>
 											<th scope="col" width="250">Nama</th>
 											<th scope="col" width="250" >Alamat</th>
-											<th scope="col" width="100" >No. Telp</th>
+											<th scope="col" width="250" >Telp</th>
+											<th scope="col" width="100" >Total Cuci</th>
 											<th scope="col" width="20" >Aksi</th>
 											<!-- <th scope="col">Action</th> -->
 										</tr>
@@ -75,8 +77,12 @@
                                                     <td><?= $no++; ?></td>
                                                     <td><?= $p['pelanggan_kd'] ?></td>
                                                     <td><?= $p['pelanggan_nama'] ?></td>
-                                                    <td><?= $p['pelanggan_alamat'] ?></td>
-                                                    <td><?= $p['pelanggan_telp'] ?></td>
+													<td><?= $p['pelanggan_alamat'] ?></td>
+													<td><?= $p['pelanggan_telp'] ?></td>
+
+													<?php $idp = $p['pelanggan_id'] ?>
+													<?php $cuci = ambilsatubaris("SELECT COUNT(orderan_pelanggan) as jumlah_cuci FROM orderan WHERE orderan_pelanggan = '$idp' ") ?>
+                                                    <td class="text-center"><?= $cuci['jumlah_cuci'] ?> x</td>
                                                     <td>
                                                         <div class="form-button-action justify-content-center">
 															<a href="#" data-toggle="modal" data-target="#edit<?= $p['pelanggan_id'] ?>" class="btn btn-link btn-primary">
