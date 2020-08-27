@@ -81,7 +81,7 @@
                             <p class="text-center" style="font-size:12px; margin-top:-15px">Telp : 086756827391 | 087619287312</p>
                             <p class="text-center" style="font-size:12px; margin-top:-15px">Email : Kasir@kasir.com</p>
                             <h5 class="text-center"><b>INVOICE</b></h5>
-                            <P class="text-center" style="font-size:20px; margin-top:-15px;">-------------------------------------------------</P>
+                            <P class="text-center" style="font-size:20px; margin-top:-15px;">----------------------------------------------</P>
 							<div class="row" style=" margin-top:-15px;">
                                 <div class="col-md-4">
                                     <h6><b>ID INVOICE</b></h6>
@@ -98,7 +98,7 @@
                                     <h6><?= $t['pelanggan_telp'] ?></h6>
                                 </div>
                             </div>
-                            <P class="text-center" style="font-size:20px; margin-top:-15px;">-------------------------------------------------</P>
+                            <P class="text-center" style="font-size:20px; margin-top:-15px;">----------------------------------------------</P>
 
                             <div class="row text-center" style=" margin-top:-15px;">
                                 <div class="col-md-4 ">
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
 
-                            <P class="text-center" style="font-size:20px; margin-top:-15px;">-------------------------------------------------</P>
+                            <P class="text-center" style="font-size:20px; margin-top:-15px;">----------------------------------------------</P>
 
                             <?php foreach($items as $i) : ?>
                             <div class="row" style=" margin-top:-15px;">
@@ -129,7 +129,7 @@
                             </div>
                             <?php endforeach; ?>
 
-                            <P class="text-center" style="font-size:20px; margin-top:-30px;">-------------------------------------------------</P>
+                            <P class="text-center" style="font-size:20px; margin-top:-30px;">----------------------------------------------</P>
                             
                             <div class="row" style=" margin-top:-25px;">
                                 <div class="col-md-4 text-center">
