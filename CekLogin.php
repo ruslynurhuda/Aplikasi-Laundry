@@ -27,6 +27,7 @@ if($cek > 0){
         $_SESSION['nama_user'] = $data['nama_user'];
         $_SESSION['user_id'] = $data['id_user'];
         $_SESSION['outlet_id'] = $data['outlet_id'];
+        $_SESSION['welcome'] = 'Selamat datang';
         header('location:kasir');
     }else if($data['role'] == 'Owner'){
         $_SESSION['role'] = 'Owner';
@@ -34,6 +35,7 @@ if($cek > 0){
         $_SESSION['nama_user'] = $data['nama_user'];
         $_SESSION['user_id'] = $data['id_user'];
         $_SESSION['outlet_id'] = $data['outlet_id'];
+        $_SESSION['welcome'] = 'Selamat datang';
         header('location:owner');
     }
 }else{

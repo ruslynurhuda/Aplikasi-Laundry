@@ -166,7 +166,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header text-white bg-primary">
-					<h5 class="modal-title" id="edit<?= $p['id_user'] ?>Label">Tambah Pengguna</h5>
+					<h5 class="modal-title" id="edit<?= $p['id_user'] ?>Label">Edit Pengguna</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>

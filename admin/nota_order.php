@@ -65,7 +65,7 @@
                             <p class="text-center" style="font-size:12px; margin-top:-15px">Telp : 086756827391 | 087619287312</p>
                             <p class="text-center" style="font-size:12px; margin-top:-15px">Email : Kasir@kasir.com</p>
                             <h5 class="text-center"><b>ORDER</b></h5>
-                            <P class="text-center" style="font-size:20px; margin-top:-15px;">-------------------------------------------------</P>
+                            <P class="text-center" style="font-size:20px; margin-top:-15px;">----------------------------------------------</P>
 							<div class="row" style=" margin-top:-15px;">
                                 <div class="col-md-5">
                                     <h6><b>ID ORDERAN</b></h6>
@@ -82,7 +82,7 @@
                                     <h6><?= $o['pelanggan_telp'] ?></h6>
                                 </div>
                             </div>
-                            <P class="text-center" style="font-size:20px; margin-top:-15px;">-------------------------------------------------</P>
+                            <P class="text-center" style="font-size:20px; margin-top:-15px;">----------------------------------------------</P>
 
                             <br>
                             <h5 class="text-center" style="font-size:13px; margin-top:-40px;"><b>Terimakasih telah menggunakan layanan laundry kami</b></h5>
